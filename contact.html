@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact · Black Meadow Real Estate</title>
+  <meta name="description" content="Contact Black Meadow Real Estate by email at blackmeadowrealestate@gmail.com, or send a note with the form on this page.">
+  <meta name="theme-color" content="#1e3a32">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner wrap">
+      <a class="brand" href="index.html">
+        <img class="brand-mark" src="assets/logo-mark.svg" alt="" width="44" height="44">
+        <span class="brand-text">
+          <span class="brand-name">Black Meadow</span>
+          <span class="brand-sub">Real Estate</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Open menu</span>
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="listings.html">Listings</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="page-hero">
+      <div class="wrap">
+        <p class="eyebrow">Contact</p>
+        <h1>Start a conversation.</h1>
+        <p class="intro">Write with a question about buying, selling, or how Black Meadow works. The form opens an email to the address below. It does not store your message on this website.</p>
+      </div>
+    </header>
+
+    <div class="wrap contact-layout">
+      <section class="panel" aria-labelledby="details-heading">
+        <h2 id="details-heading">Reach us</h2>
+        <ul class="contact-list">
+          <li>
+            <span>Email</span>
+            <a href="mailto:blackmeadowrealestate@gmail.com">blackmeadowrealestate@gmail.com</a>
+          </li>
+          <!-- PLACEHOLDER -->
+          <li>
+            <span>Phone</span>
+            (555) 555-0199
+          </li>
+          <!-- PLACEHOLDER -->
+          <li>
+            <span>Office</span>
+            <address>100 Meadow Street, Suite 200</address>
+          </li>
+        </ul>
+      </section>
+
+      <section class="panel" aria-labelledby="form-heading">
+        <h2 id="form-heading">Send a note</h2>
+        <p class="form-help">Required fields are marked with an asterisk. Sending the form opens your email app.</p>
+        <form class="contact-form" action="mailto:blackmeadowrealestate@gmail.com?subject=Inquiry%20from%20the%20Black%20Meadow%20website" method="post" enctype="text/plain">
+          <div class="field">
+            <label for="name">Name <abbr title="required">*</abbr></label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email <abbr title="required">*</abbr></label>
+            <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="message">Message <abbr title="required">*</abbr></label>
+            <textarea id="message" name="message" rows="6" maxlength="2000" required></textarea>
+          </div>
+          <button class="button" type="submit">Email Black Meadow</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner wrap">
+      <div>
+        <p class="footer-name">Black Meadow Real Estate</p>
+        <a class="footer-mail" href="mailto:blackmeadowrealestate@gmail.com">blackmeadowrealestate@gmail.com</a>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="listings.html">Listings</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <p class="copyright">© 2026 Black Meadow Real Estate</p>
+    </div>
+  </footer>
+  <script src="nav.js"></script>
+</body>
+</html>
