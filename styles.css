@@ -954,3 +954,22 @@ input:focus, textarea:focus {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+/* Homepage hero layout tweak (2026-11-13): panel to far left, key logo far right and smaller */
+.hero .hero-inner.wrap {
+  margin-left: 1.25rem;
+  margin-right: auto;
+  margin-top: 1.25rem;
+  width: auto;
+}
+.hero .broker-key {
+  right: 1.25rem;
+  width: min(8rem, 28vw);
+}
+@media (max-width: 600px) {
+  .hero .hero-inner.wrap { margin: 1rem; }
+  .hero .broker-key { right: 0.75rem; width: 6rem; }
+}
+/* Panel upper-left, logo bottom-right (2026-11-13) */
+.hero .hero-inner.wrap { margin-top: 1rem; margin-left: 1rem; }
+.hero .broker-key { right: 1rem; bottom: 1rem; }
