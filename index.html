@@ -1,160 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Black Meadow Real Estate</title>
-  <meta name="description" content="Black Meadow Real Estate helps buyers and sellers with clear advice. Browse sample listings and get in touch.">
-  <meta name="theme-color" content="#1e3a32">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://domsellsforyou.com/">
+  <title>Dom Sells For You | Dominic Santagato</title>
+  <meta name="description" content="Dominic Santagato — real estate help for buyers and sellers, with Joseph Baratta and Company.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip" href="#main">Skip to content</a>
+
   <header class="site-header">
-    <div class="header-inner wrap">
-      <a class="brand" href="index.html">
-        <img class="brand-mark" src="assets/logo-mark.svg" alt="" width="44" height="44">
-        <span class="brand-text">
-          <span class="brand-name">Black Meadow</span>
-          <span class="brand-sub">Real Estate</span>
-        </span>
-      </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span class="sr-only">Open menu</span>
-        <span class="nav-toggle-bars" aria-hidden="true"></span>
-      </button>
-      <nav id="site-nav" class="site-nav" aria-label="Primary">
-        <ul>
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="listings.html">Listings</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+    <div class="wrap header-inner">
+      <a class="logo" href="#top">Dom</a>
+      <div class="header-right">
+      <nav aria-label="Primary">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="hudson-valley.html">Hudson Valley</a>
+        <a href="special-homes.html">Special Homes</a>
+        <a href="buy-a-home.html">Buy a Home</a>
+        <a href="list-your-home.html">List Your Home</a>
+        <a href="listings.html">Listings</a>
+        <a href="contact.html">Contact</a>
       </nav>
+      <a class="homes-icon" href="listings.html" aria-label="Homes for sale">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2 3 11h2v9h6v-6h2v6h6v-9h2L12 3.2z"/></svg>
+        <span>Homes for Sale</span>
+      </a>
+      </div>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero-inner wrap">
-        <div class="hero-copy">
-          <p class="eyebrow">Black Meadow Real Estate</p>
-          <h1 id="hero-heading">Find your place in the meadow.</h1>
-          <p class="lede">Thoughtful representation for buyers and sellers who want clear advice and a steady process.</p>
-          <a class="button" href="listings.html">View sample listings</a>
-        </div>
-        <div class="hero-art">
-          <img src="assets/hero-meadow.svg" width="760" height="620" alt="A house set in a dark green meadow under a pale sun" fetchpriority="high">
-        </div>
+    <section id="top" class="hero">
+      <div class="hero-media" role="img" aria-label="A snow-covered house with a wraparound wooden deck in the woods"></div>
+      <div class="hero-shade"></div>
+      <div class="wrap hero-inner">
+        <p class="eyebrow">Dominic Santagato · Real Estate</p>
+        <h1 class="broker-heading">Real Estate in the Hudson Valley</h1>
+        <p class="lede">Let’s find your home. Dominic works with Joseph Baratta and Company, helping buyers and sellers look at a house from the inside out.</p>
       </div>
+      <img class="broker-key" src="brand/baratta-key.png" width="188" height="188" alt="Joseph Baratta and Company Realty key logo">
     </section>
 
-    <section class="section" aria-labelledby="featured-heading">
+    <div class="hero-lower-actions">
       <div class="wrap">
-        <div class="section-head">
+        <a class="btn" href="listings.html">Homes for sale</a>
+        <a class="btn btn-light" href="#book">Book a call</a>
+      </div>
+    </div>
+
+
+    <section id="homes-for-sale" class="featured-homes">
+      <div class="wrap">
+        <div class="featured-head">
           <div>
-            <p class="eyebrow">Selected homes</p>
-            <h2 id="featured-heading">Featured sample listings</h2>
+            <p class="eyebrow">Homes for sale</p>
+            <h2>Featured properties</h2>
+            <p class="featured-note">Current listings from Joseph Baratta and Company, as of November 9, 2026. Click a home to open the full listing on the brokerage site.</p>
           </div>
-          <a class="text-link" href="listings.html">See all sample listings</a>
+          <a class="btn" href="listings.html">View all listings</a>
         </div>
-        <p class="section-note">These three homes are samples for the site. They are not active listings.</p>
-        <div class="listing-grid">
-          <article class="listing-card">
-            <div class="listing-media">
-              <img src="assets/prop-01.svg" width="640" height="480" alt="Illustration of a two-story colonial house">
-              <p class="sample-badge">Sample</p>
-            </div>
-            <div class="listing-body">
-              <!-- PLACEHOLDER -->
-              <p class="price">$875,000</p>
-              <h3>14 Meadow Lane</h3>
-              <p class="specs">4 beds · 3 baths · 2,840 sqft</p>
-              <p class="town">Ashford</p>
-            </div>
-          </article>
-          <article class="listing-card">
-            <div class="listing-media">
-              <img src="assets/prop-02.svg" width="640" height="480" alt="Illustration of a cape-style house with a dormer">
-              <p class="sample-badge">Sample</p>
-            </div>
-            <div class="listing-body">
-              <!-- PLACEHOLDER -->
-              <p class="price">$642,000</p>
-              <h3>8 Birch Hollow</h3>
-              <p class="specs">3 beds · 2 baths · 1,960 sqft</p>
-              <p class="town">Birch Crossing</p>
-            </div>
-          </article>
-          <article class="listing-card">
-            <div class="listing-media">
-              <img src="assets/prop-03.svg" width="640" height="480" alt="Illustration of a modern farmhouse with a porch">
-              <p class="sample-badge">Sample</p>
-            </div>
-            <div class="listing-body">
-              <!-- PLACEHOLDER -->
-              <p class="price">$1,150,000</p>
-              <h3>22 Ridge Road</h3>
-              <p class="specs">5 beds · 4 baths · 3,420 sqft</p>
-              <p class="town">Hartfield</p>
-            </div>
-          </article>
+        <div id="featured-homes" class="home-grid"></div>
+        <div class="listing-links">
+          <a class="btn btn-light" href="https://www.josephbarattaandcompany.com/fine/real/estate/newsearch" target="_blank" rel="noopener noreferrer">Search all listings</a>
+          <a class="text-link" href="https://www.josephbarattaandcompany.com/fine/real/estate/newsnew" target="_blank" rel="noopener noreferrer">New listings</a>
+          <a class="text-link" href="https://www.josephbarattaandcompany.com/fine/real/estate/newsprice" target="_blank" rel="noopener noreferrer">Price changes</a>
         </div>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="areas-heading">
+    <section class="featured-communities" id="communities">
       <div class="wrap">
-        <p class="eyebrow">Where we work</p>
-        <h2 id="areas-heading">Service areas</h2>
-        <p class="section-note">The towns below are placeholders for the communities Black Meadow will serve.</p>
-        <!-- PLACEHOLDER -->
-        <ul class="town-grid">
-          <li>Ashford</li>
-          <li>Birch Crossing</li>
-          <li>Hartfield</li>
-          <li>Cedar Hollow</li>
-          <li>Northvale</li>
-          <li>Linden Hill</li>
-        </ul>
+        <p class="eyebrow">Featured communities</p>
+        <h2>Search by area</h2>
+        <p class="community-note">These are the communities featured on the Joseph Baratta and Company site, including Tarrytown, where the brokerage office is located. Each link opens current listings on their site.</p>
+        <div class="community-grid">
+          <a class="community-chip" href="https://www.josephbarattaandcompany.com/fine/real/estate/newsearch/cityname/Tarrytown%20-%20NY" target="_blank" rel="noopener noreferrer">Tarrytown</a>
+          <a class="community-chip" href="https://www.josephbarattaandcompany.com/fine/real/estate/newsearch/cityname/White%20Plains%20-%20NY" target="_blank" rel="noopener noreferrer">White Plains</a>
+          <a class="community-chip" href="https://www.josephbarattaandcompany.com/fine/real/estate/newsearch/cityname/Yonkers%20-%20NY" target="_blank" rel="noopener noreferrer">Yonkers</a>
+          <a class="community-chip" href="https://www.josephbarattaandcompany.com/fine/real/estate/newsearch/cityname/Nyack%20-%20NY" target="_blank" rel="noopener noreferrer">Nyack</a>
+          <a class="community-chip" href="https://www.josephbarattaandcompany.com/fine/real/estate/newsearch/cityname/Greenburgh%20-%20NY" target="_blank" rel="noopener noreferrer">Greenburgh</a>
+          <a class="community-chip" href="https://www.josephbarattaandcompany.com/fine/real/estate/newsearch/cityname/Elmsford%20-%20NY" target="_blank" rel="noopener noreferrer">Elmsford</a>
+          <a class="community-chip" href="https://www.josephbarattaandcompany.com/fine/real/estate/newsearch/cityname/Mamaroneck%20-%20NY" target="_blank" rel="noopener noreferrer">Mamaroneck</a>
+          <a class="community-chip" href="https://www.josephbarattaandcompany.com/fine/real/estate/newsearch/cityname/Rye%20-%20NY" target="_blank" rel="noopener noreferrer">Rye</a>
+          <a class="community-chip" href="https://www.josephbarattaandcompany.com/fine/real/estate/newsearch/cityname/Peekskill%20-%20NY" target="_blank" rel="noopener noreferrer">Peekskill</a>
+          <a class="community-chip" href="https://www.josephbarattaandcompany.com/fine/real/estate/newsearch/cityname/New%20City%20-%20NY" target="_blank" rel="noopener noreferrer">New City</a>
+          <a class="community-chip" href="https://www.josephbarattaandcompany.com/fine/real/estate/newsearch/cityname/Suffern%20-%20NY" target="_blank" rel="noopener noreferrer">Suffern</a>
+          <a class="community-chip" href="https://www.josephbarattaandcompany.com/fine/real/estate/newsearch/cityname/New%20York%20-%20NY" target="_blank" rel="noopener noreferrer">New York</a>
+        </div>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="about-teaser-heading">
-      <div class="wrap about-teaser">
-        <div>
-          <p class="eyebrow">The practice</p>
-          <h2 id="about-teaser-heading">Advice with a<br> longer view.</h2>
+    <section id="about" class="about">
+      <div class="wrap about-split">
+        <figure class="about-photo">
+          <img src="photos/dominic.jpg" width="864" height="1080" alt="Dominic Santagato standing at the loft railing of a log home">
+        </figure>
+        <div class="about-copy">
+        <p class="eyebrow">About</p>
+        <h2>From the inside out</h2>
+        <p>Before helping people buy and sell, Dominic came up through construction and general contracting. That background is the foundation of how he looks at a house — not just the photos and the asking price, but the structure, the systems, and the work that went into it.</p>
+        <p>He can walk a buyer or a seller through a home from the inside out: how it was built, what to pay attention to, and how to talk about the details that make a special property stand out. This is starter copy, so we can add years of experience, credentials, and the area you serve whenever you’re ready.</p>
+        <p><a class="text-link" href="about.html">More about Dominic</a></p>
         </div>
-        <div>
-          <p>Black Meadow Real Estate is a small practice for buyers and sellers who want plain-language advice from the first conversation through closing.</p>
-          <a class="button button-dark" href="about.html">About Black Meadow</a>
-        </div>
+      </div>
+    </section>
+
+    <section class="feature-links">
+      <div class="wrap feature-grid feature-grid-3">
+        <a class="feature-card" href="special-homes.html">
+          <p class="eyebrow">For distinctive properties</p>
+          <h2>Special Homes</h2>
+          <p>Listings that give a one-of-a-kind home the story and care it deserves.</p>
+        </a>
+        <a class="feature-card" href="list-your-home.html">
+          <p class="eyebrow">For sellers</p>
+          <h2>List Your Home</h2>
+          <p>A clear path for owners who are ready to put a special home on the market.</p>
+        </a>
+        <a class="feature-card" href="buy-a-home.html">
+          <p class="eyebrow">For buyers</p>
+          <h2>Buy a Home</h2>
+          <p>A careful walkthrough of the house, from the first impression to how it was built.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="book" class="book">
+      <div class="wrap contact-inner">
+        <p class="eyebrow">Book a call</p>
+        <h2>Pick a time to talk</h2>
+        <p class="contact-note">Tell me a few times that work for you. This sends a booking request to blackmeadowrealestate@gmail.com. We can connect it to a live calendar later so people can book a confirmed slot.</p>
+        <form id="book-form" data-email-to="blackmeadowrealestate@gmail.com" data-email-type="booking">
+          <label>
+            Name
+            <input type="text" name="name" autocomplete="name" required placeholder="Your name">
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required placeholder="you@example.com">
+          </label>
+          <label>
+            Phone
+            <input type="tel" name="phone" autocomplete="tel" placeholder="(optional)">
+          </label>
+          <label>
+            Preferred date and time
+            <input type="text" name="preferred" required placeholder="For example, Thursday after 3pm">
+          </label>
+          <label>
+            What would you like to discuss?
+            <textarea name="message" rows="4" placeholder="Buying, selling, or a specific home"></textarea>
+          </label>
+          <button class="btn" type="submit">Request a call</button>
+          <p class="form-status" hidden></p>
+        </form>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="wrap contact-inner">
+        <p class="eyebrow">Contact</p>
+        <h2>Let’s talk</h2>
+        <p class="contact-email">Email me at <a href="mailto:blackmeadowrealestate@gmail.com">blackmeadowrealestate@gmail.com</a></p>
+        <p class="contact-note">Messages from this form are addressed to blackmeadowrealestate@gmail.com.</p>
+        <form id="lead-form" data-email-to="blackmeadowrealestate@gmail.com" data-email-type="lead">
+          <label>
+            Name
+            <input type="text" name="name" autocomplete="name" required placeholder="Your name">
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required placeholder="you@example.com">
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" required placeholder="How can I help?"></textarea>
+          </label>
+          <button class="btn" type="submit">Send a message</button>
+          <p class="form-status" hidden></p>
+        </form>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-inner wrap">
-      <div>
-        <p class="footer-name">Black Meadow Real Estate</p>
-        <a class="footer-mail" href="mailto:blackmeadowrealestate@gmail.com">blackmeadowrealestate@gmail.com</a>
+    <div class="wrap footer-inner">
+      <div class="footer-copy">
+        <p>© 2026 Dominic Santagato. With Joseph Baratta and Company Realty.</p>
+        <p class="office-line">Joseph Baratta and Company Realty · 120 White Plains Road, Suite 112, Tarrytown, NY 10591</p>
       </div>
-      <nav class="footer-nav" aria-label="Footer">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="listings.html">Listings</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <p class="copyright">© 2026 Black Meadow Real Estate</p>
+      <img class="footer-lockup" src="brand/baratta-lockup.png" width="800" height="410" alt="Joseph Baratta and Company Realty">
     </div>
   </footer>
-  <script src="nav.js"></script>
+  <script src="listings-data.js"></script>
+  <script src="site.js"></script>
 </body>
 </html>

@@ -1,116 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact · Black Meadow Real Estate</title>
-  <meta name="description" content="Contact Black Meadow Real Estate by email at blackmeadowrealestate@gmail.com, or send a note with the form on this page.">
-  <meta name="theme-color" content="#1e3a32">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <title>Contact | Dom Sells For You</title>
+  <meta name="description" content="Get in touch with Dominic Santagato or request a call. With Joseph Baratta and Company.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip" href="#main">Skip to content</a>
+
   <header class="site-header">
-    <div class="header-inner wrap">
-      <a class="brand" href="index.html">
-        <img class="brand-mark" src="assets/logo-mark.svg" alt="" width="44" height="44">
-        <span class="brand-text">
-          <span class="brand-name">Black Meadow</span>
-          <span class="brand-sub">Real Estate</span>
-        </span>
-      </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span class="sr-only">Open menu</span>
-        <span class="nav-toggle-bars" aria-hidden="true"></span>
-      </button>
-      <nav id="site-nav" class="site-nav" aria-label="Primary">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="listings.html">Listings</a></li>
-          <li><a href="contact.html" aria-current="page">Contact</a></li>
-        </ul>
+    <div class="wrap header-inner">
+      <a class="logo" href="index.html">Dom Sells For You</a>
+      <div class="header-right">
+      <nav aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="hudson-valley.html">Hudson Valley</a>
+        <a href="special-homes.html">Special Homes</a>
+        <a href="buy-a-home.html">Buy a Home</a>
+        <a href="list-your-home.html">List Your Home</a>
+        <a href="listings.html">Listings</a>
+        <a href="contact.html" aria-current="page">Contact</a>
       </nav>
+      <a class="homes-icon" href="listings.html" aria-label="Homes for sale">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2 3 11h2v9h6v-6h2v6h6v-9h2L12 3.2z"/></svg>
+        <span>Homes for Sale</span>
+      </a>
+      </div>
     </div>
   </header>
 
   <main id="main">
-    <header class="page-hero">
-      <div class="wrap">
+    <section class="page-hero page-hero-photo page-hero-photo-light hero-porch">
+      <div class="page-hero-media" role="img" aria-label="A covered log-home porch with seating, looking out into the woods"></div>
+      <div class="page-hero-shade"></div>
+      <div class="wrap page-hero-inner">
         <p class="eyebrow">Contact</p>
-        <h1>Start a conversation.</h1>
-        <p class="intro">Write with a question about buying, selling, or how Black Meadow works. The form opens an email to the address below. It does not store your message on this website.</p>
+        <h1>Let’s talk about your next home</h1>
+        <p class="lede">Send a note or request a call. Dominic works with Joseph Baratta and Company, and messages go to blackmeadowrealestate@gmail.com.</p>
       </div>
-    </header>
+    </section>
 
-    <div class="wrap contact-layout">
-      <section class="panel" aria-labelledby="details-heading">
-        <h2 id="details-heading">Reach us</h2>
-        <ul class="contact-list">
-          <li>
-            <span>Email</span>
-            <a href="mailto:blackmeadowrealestate@gmail.com">blackmeadowrealestate@gmail.com</a>
-          </li>
-          <!-- PLACEHOLDER -->
-          <li>
-            <span>Phone</span>
-            (555) 555-0199
-          </li>
-          <!-- PLACEHOLDER -->
-          <li>
-            <span>Office</span>
-            <address>100 Meadow Street, Suite 200</address>
-          </li>
-        </ul>
-      </section>
-
-      <section class="panel" aria-labelledby="form-heading">
-        <h2 id="form-heading">Send a note</h2>
-        <p class="form-help">Required fields are marked with an asterisk. Sending the form opens your email app.</p>
-        <form class="contact-form" action="mailto:blackmeadowrealestate@gmail.com?subject=Inquiry%20from%20the%20Black%20Meadow%20website" method="post" enctype="text/plain">
-          <div class="field">
-            <label for="name">Name <abbr title="required">*</abbr></label>
-            <input id="name" name="name" type="text" autocomplete="name" required>
-          </div>
-          <div class="field">
-            <label for="email">Email <abbr title="required">*</abbr></label>
-            <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required>
-          </div>
-          <div class="field">
-            <label for="phone">Phone</label>
-            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel">
-          </div>
-          <div class="field">
-            <label for="message">Message <abbr title="required">*</abbr></label>
-            <textarea id="message" name="message" rows="6" maxlength="2000" required></textarea>
-          </div>
-          <button class="button" type="submit">Email Black Meadow</button>
+    <section id="contact" class="contact">
+      <div class="wrap contact-inner">
+        <p class="eyebrow">Write</p>
+        <h2>Send a message</h2>
+        <p class="contact-email">Email me at <a href="mailto:blackmeadowrealestate@gmail.com">blackmeadowrealestate@gmail.com</a></p>
+        <p class="contact-note">Messages from this form are addressed to blackmeadowrealestate@gmail.com.</p>
+        <form id="lead-form" data-email-to="blackmeadowrealestate@gmail.com" data-email-type="lead">
+          <label>
+            Name
+            <input type="text" name="name" autocomplete="name" required placeholder="Your name">
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required placeholder="you@example.com">
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" required placeholder="How can I help?"></textarea>
+          </label>
+          <button class="btn" type="submit">Send a message</button>
+          <p class="form-status" hidden></p>
         </form>
-      </section>
-    </div>
+      </div>
+    </section>
+
+    <section id="book" class="book">
+      <div class="wrap contact-inner">
+        <p class="eyebrow">Book a call</p>
+        <h2>Pick a time to talk</h2>
+        <p class="contact-note">Tell me a few times that work for you. This sends a booking request to blackmeadowrealestate@gmail.com. We can connect it to a live calendar later so people can book a confirmed slot.</p>
+        <form id="book-form" data-email-to="blackmeadowrealestate@gmail.com" data-email-type="booking">
+          <label>
+            Name
+            <input type="text" name="name" autocomplete="name" required placeholder="Your name">
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required placeholder="you@example.com">
+          </label>
+          <label>
+            Phone
+            <input type="tel" name="phone" autocomplete="tel" placeholder="(optional)">
+          </label>
+          <label>
+            Preferred date and time
+            <input type="text" name="preferred" required placeholder="For example, Thursday after 3pm">
+          </label>
+          <label>
+            What would you like to discuss?
+            <textarea name="message" rows="4" placeholder="Buying, selling, or a specific home"></textarea>
+          </label>
+          <button class="btn" type="submit">Request a call</button>
+          <p class="form-status" hidden></p>
+        </form>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-inner wrap">
-      <div>
-        <p class="footer-name">Black Meadow Real Estate</p>
-        <a class="footer-mail" href="mailto:blackmeadowrealestate@gmail.com">blackmeadowrealestate@gmail.com</a>
+    <div class="wrap footer-inner">
+      <div class="footer-copy">
+        <p>© 2026 Dominic Santagato. With Joseph Baratta and Company Realty.</p>
+        <p class="office-line">Joseph Baratta and Company Realty · 120 White Plains Road, Suite 112, Tarrytown, NY 10591</p>
+        <p class="footer-social"><a href="https://www.instagram.com/realestateinthehudsonvalley/" target="_blank" rel="noopener noreferrer"><svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.05" fill="currentColor"/></svg>Joseph Baratta on Instagram · @realestateinthehudsonvalley</a></p>
       </div>
-      <nav class="footer-nav" aria-label="Footer">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="listings.html">Listings</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <p class="copyright">© 2026 Black Meadow Real Estate</p>
+      <img class="footer-lockup" src="brand/baratta-lockup.png" width="800" height="410" alt="Joseph Baratta and Company Realty">
     </div>
   </footer>
-  <script src="nav.js"></script>
+  <script src="listings-data.js"></script>
+  <script src="site.js"></script>
 </body>
 </html>
