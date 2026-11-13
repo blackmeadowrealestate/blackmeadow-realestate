@@ -973,3 +973,16 @@ input:focus, textarea:focus {
 /* Panel upper-left, logo bottom-right (2026-11-13) */
 .hero .hero-inner.wrap { margin-top: 1rem; margin-left: 1rem; }
 .hero .broker-key { right: 1rem; bottom: 1rem; }
+
+/* Homepage: gray panel removed; About-page heading in the sky (2026-11-13) */
+.hero .hero-sky-title {
+  position: absolute;
+  top: 0.75rem;
+  left: 0; right: 0;
+  z-index: 1;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+  color: var(--hero-text);
+  text-shadow: 0 2px 22px rgba(28, 25, 21, 0.7);
+}
