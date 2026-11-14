@@ -989,3 +989,6 @@ input:focus, textarea:focus {
 
 /* Hide "Dom" logo text in header, keep menu position (2026-11-13) */
 .site-header .logo { visibility: hidden; }
+
+.btn-instagram { display:inline-flex; align-items:center; gap:.5rem; }
+.btn-instagram svg { flex:none; }
