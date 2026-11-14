@@ -986,3 +986,6 @@ input:focus, textarea:focus {
   color: var(--hero-text);
   text-shadow: 0 2px 22px rgba(28, 25, 21, 0.7);
 }
+
+/* Hide "Dom" logo text in header, keep menu position (2026-11-13) */
+.site-header .logo { visibility: hidden; }
