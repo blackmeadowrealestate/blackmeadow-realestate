@@ -992,3 +992,5 @@ input:focus, textarea:focus {
 
 .btn-instagram { display:inline-flex; align-items:center; gap:.5rem; }
 .btn-instagram svg { flex:none; }
+
+.visit-count { font-size:.85rem; opacity:.8; margin-top:.25rem; }
