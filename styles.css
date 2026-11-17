@@ -994,3 +994,28 @@ input:focus, textarea:focus {
 .btn-instagram svg { flex:none; }
 
 .visit-count { font-size:.85rem; opacity:.8; margin-top:.25rem; }
+
+/* Homepage drone flyover */
+.hero-drone {
+  position: absolute;
+  top: 7.5rem;
+  left: 0;
+  z-index: 2;
+  pointer-events: none;
+  animation: drone-fly 16s linear infinite;
+  will-change: transform;
+}
+.hero-drone svg { display: block; animation: drone-bob 2.2s ease-in-out infinite; filter: drop-shadow(0 4px 4px rgba(0,0,0,.25)); }
+.hero-drone .rotor { transform-box: fill-box; transform-origin: center; animation: drone-rotor .12s linear infinite; }
+.hero-drone .drone-light { animation: drone-blink 1s steps(2, start) infinite; }
+@keyframes drone-fly {
+  0%   { transform: translateX(-140px) rotate(4deg); }
+  45%  { transform: translateX(45vw) translateY(-14px) rotate(3deg); }
+  55%  { transform: translateX(55vw) translateY(-14px) rotate(3deg); }
+  100% { transform: translateX(calc(100vw + 140px)) rotate(4deg); }
+}
+@keyframes drone-bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+@keyframes drone-rotor { 0% { transform: scaleX(1); } 50% { transform: scaleX(.25); } 100% { transform: scaleX(1); } }
+@keyframes drone-blink { to { visibility: hidden; } }
+@media (max-width: 640px) { .hero-drone { top: 9rem; } .hero-drone svg { width: 72px; height: 36px; } }
+@media (prefers-reduced-motion: reduce) { .hero-drone { display: none; } }
