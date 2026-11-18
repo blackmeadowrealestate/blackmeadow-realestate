@@ -995,47 +995,73 @@ input:focus, textarea:focus {
 
 .visit-count { font-size:.85rem; opacity:.8; margin-top:.25rem; }
 
-/* Homepage drone: buzzes around the hero photo, links to aerial-drone.html */
+/* Homepage drone: smooth JS-driven flight, links to aerial-drone.html */
 .hero-drone {
   position: absolute;
-  top: 30%;
-  left: 10%;
+  top: 0;
+  left: 0;
   z-index: 3;
   display: block;
   cursor: pointer;
-  animation: drone-wander 22s ease-in-out infinite;
+  text-decoration: none;
+  transform: translate3d(32vw, 9rem, 0);
+  will-change: transform;
+  -webkit-tap-highlight-color: transparent;
 }
-.hero-drone:focus-visible { outline: 2px solid #fff; outline-offset: 4px; border-radius: 8px; }
-.hero-drone svg { display: block; animation: drone-buzz .45s ease-in-out infinite alternate; filter: drop-shadow(0 4px 4px rgba(0,0,0,.25)); transition: transform .2s; }
-.hero-drone:hover svg { animation-play-state: paused; transform: scale(1.12); }
-.hero-drone:hover { animation-play-state: paused; }
-.hero-drone .rotor { transform-box: fill-box; transform-origin: center; animation: drone-rotor .1s linear infinite; }
-.hero-drone .drone-light { animation: drone-blink 1s steps(2, start) infinite; }
-@keyframes drone-wander {
-  0%   { left: 8%;  top: 32%; transform: rotate(-4deg); }
-  8%   { left: 22%; top: 24%; transform: rotate(6deg); }
-  14%  { left: 18%; top: 44%; transform: rotate(-8deg); }
-  22%  { left: 38%; top: 30%; transform: rotate(5deg); }
-  28%  { left: 34%; top: 26%; transform: rotate(-3deg); }
-  36%  { left: 56%; top: 40%; transform: rotate(8deg); }
-  42%  { left: 62%; top: 22%; transform: rotate(-6deg); }
-  50%  { left: 78%; top: 34%; transform: rotate(7deg); }
-  56%  { left: 70%; top: 50%; transform: rotate(-5deg); }
-  63%  { left: 84%; top: 26%; transform: rotate(4deg); }
-  70%  { left: 60%; top: 30%; transform: rotate(-9deg); }
-  78%  { left: 44%; top: 46%; transform: rotate(6deg); }
-  85%  { left: 30%; top: 22%; transform: rotate(-4deg); }
-  92%  { left: 14%; top: 40%; transform: rotate(5deg); }
-  100% { left: 8%;  top: 32%; transform: rotate(-4deg); }
+.hero-drone .drone-body {
+  display: block;
+  transform: rotate(var(--tilt, 0deg));
+  transition: transform .35s ease;
 }
-@keyframes drone-buzz {
-  0%   { transform: translate(0, 0); }
-  25%  { transform: translate(2px, -3px); }
-  50%  { transform: translate(-2px, -6px); }
-  75%  { transform: translate(3px, -2px); }
-  100% { transform: translate(-1px, -5px); }
+.hero-drone svg {
+  display: block;
+  filter: drop-shadow(0 6px 8px rgba(0,0,0,.35)) drop-shadow(0 0 1px rgba(0,0,0,.4));
+  animation: drone-hover 1.6s ease-in-out infinite alternate;
+  transition: transform .3s ease;
 }
-@keyframes drone-rotor { 0% { transform: scaleX(1); } 50% { transform: scaleX(.25); } 100% { transform: scaleX(1); } }
-@keyframes drone-blink { to { visibility: hidden; } }
-@media (max-width: 640px) { .hero-drone svg { width: 72px; height: 36px; } }
-@media (prefers-reduced-motion: reduce) { .hero-drone, .hero-drone svg, .hero-drone .rotor { animation: none; } }
+.hero-drone .prop { transform-box: fill-box; transform-origin: center; animation: drone-prop .09s linear infinite; }
+.hero-drone .prop-b { animation-duration: .1s; animation-direction: reverse; }
+.hero-drone .nav-red { animation: drone-blink 1.2s ease-in-out infinite; }
+.hero-drone .nav-green { animation: drone-blink 1.2s ease-in-out .6s infinite; }
+.hero-drone .drone-shadow {
+  display: block;
+  width: 60px; height: 8px;
+  margin: 2px auto 0;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(0,0,0,.25), rgba(0,0,0,0));
+  animation: drone-shadow 1.6s ease-in-out infinite alternate;
+}
+.hero-drone .drone-tip {
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 8px);
+  transform: translate(-4px, -50%);
+  white-space: nowrap;
+  padding: .4rem .75rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,.95);
+  color: #1c1915;
+  font: 500 .85rem/1.2 "Outfit", system-ui, sans-serif;
+  box-shadow: 0 4px 14px rgba(0,0,0,.18);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease, transform .25s ease;
+}
+.hero-drone.tip-left .drone-tip { left: auto; right: calc(100% + 8px); transform: translate(4px, -50%); }
+.hero-drone:hover .drone-tip,
+.hero-drone:focus-visible .drone-tip { opacity: 1; transform: translate(0, -50%); }
+.hero-drone:hover svg,
+.hero-drone:focus-visible svg { transform: scale(1.1); }
+.hero-drone:focus-visible { outline: none; }
+.hero-drone:focus-visible .drone-body { outline: 2px solid #fff; outline-offset: 6px; border-radius: 12px; }
+@keyframes drone-hover { from { transform: translateY(0); } to { transform: translateY(-5px); } }
+@keyframes drone-shadow { from { transform: scaleX(1); opacity: .9; } to { transform: scaleX(.8); opacity: .6; } }
+@keyframes drone-prop { from { transform: scaleX(1); } 50% { transform: scaleX(.18); } to { transform: scaleX(1); } }
+@keyframes drone-blink { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
+@media (max-width: 640px) {
+  .hero-drone svg { width: 92px; height: 48px; }
+  .hero-drone .drone-tip { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-drone svg, .hero-drone .prop, .hero-drone .drone-shadow, .hero-drone .nav-light { animation: none; }
+}

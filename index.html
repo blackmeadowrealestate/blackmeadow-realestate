@@ -41,21 +41,38 @@
       <div class="hero-media" role="img" aria-label="A snow-covered house with a wraparound wooden deck in the woods"></div>
       <div class="hero-shade"></div>
       <h1 class="hero-sky-title">Real Estate in the Hudson Valley</h1>
-      <a class="hero-drone" href="aerial-drone.html" aria-label="Complimentary aerial drone footage when you list with me" title="Complimentary aerial drone footage">
-        <svg viewBox="0 0 120 60" width="96" height="48" aria-hidden="true">
-          <g fill="none" stroke="#1c1915" stroke-width="3" stroke-linecap="round">
-            <line x1="22" y1="16" x2="48" y2="26"/><line x1="98" y1="16" x2="72" y2="26"/>
-            <line x1="22" y1="16" x2="22" y2="10"/><line x1="98" y1="16" x2="98" y2="10"/>
-          </g>
-          <ellipse class="rotor" cx="22" cy="9" rx="18" ry="2.5" fill="#1c1915" opacity=".55"/>
-          <ellipse class="rotor" cx="98" cy="9" rx="18" ry="2.5" fill="#1c1915" opacity=".55"/>
-          <rect x="44" y="22" width="32" height="14" rx="5" fill="#2b2722"/>
-          <rect x="54" y="36" width="12" height="7" rx="2" fill="#2b2722"/>
-          <circle cx="60" cy="40" r="3" fill="#7fb3d5"/>
-          <circle class="drone-light" cx="48" cy="29" r="1.8" fill="#e74c3c"/>
-          <line x1="48" y1="36" x2="44" y2="46" stroke="#1c1915" stroke-width="2.5" stroke-linecap="round"/>
-          <line x1="72" y1="36" x2="76" y2="46" stroke="#1c1915" stroke-width="2.5" stroke-linecap="round"/>
-        </svg>
+      <a class="hero-drone" href="aerial-drone.html" aria-label="Complimentary aerial drone footage when you list with me">
+        <span class="drone-body">
+          <svg viewBox="0 0 160 84" width="132" height="69" aria-hidden="true">
+            <defs>
+              <linearGradient id="dg-shell" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#cfd3d6"/></linearGradient>
+              <linearGradient id="dg-arm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a5f63"/><stop offset="1" stop-color="#2f3336"/></linearGradient>
+              <radialGradient id="dg-lens" cx=".35" cy=".35" r=".7"><stop offset="0" stop-color="#9fd3ff"/><stop offset=".45" stop-color="#1f4f7a"/><stop offset="1" stop-color="#0c1a26"/></radialGradient>
+              <radialGradient id="dg-blur" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".7" stop-color="#fff" stop-opacity=".18"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+            </defs>
+            <g stroke="url(#dg-arm)" stroke-width="5" stroke-linecap="round">
+              <line x1="30" y1="22" x2="62" y2="38"/><line x1="130" y1="22" x2="98" y2="38"/>
+            </g>
+            <g fill="#2f3336"><rect x="25" y="16" width="10" height="9" rx="2.5"/><rect x="125" y="16" width="10" height="9" rx="2.5"/></g>
+            <ellipse cx="30" cy="14" rx="27" ry="5" fill="url(#dg-blur)"/>
+            <ellipse cx="130" cy="14" rx="27" ry="5" fill="url(#dg-blur)"/>
+            <g class="prop"><rect x="6" y="12.6" width="48" height="2.8" rx="1.4" fill="#2f3336" opacity=".75"/></g>
+            <g class="prop prop-b"><rect x="106" y="12.6" width="48" height="2.8" rx="1.4" fill="#2f3336" opacity=".75"/></g>
+            <path d="M58 34 Q80 24 102 34 L106 46 Q80 54 54 46 Z" fill="url(#dg-shell)" stroke="#9aa1a6" stroke-width="1"/>
+            <path d="M66 35 Q80 30 94 35" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity=".9"/>
+            <circle class="nav-light nav-red" cx="60" cy="43" r="2.2" fill="#ff4b3e"/>
+            <circle class="nav-light nav-green" cx="100" cy="43" r="2.2" fill="#3ee07a"/>
+            <rect x="74" y="50" width="12" height="6" rx="2" fill="#3a3f43"/>
+            <rect x="70" y="55" width="20" height="13" rx="5" fill="#2b2f32"/>
+            <circle cx="80" cy="61.5" r="5" fill="url(#dg-lens)"/>
+            <circle cx="78.4" cy="59.8" r="1.3" fill="#fff" opacity=".8"/>
+            <g stroke="#3a3f43" stroke-width="2.5" stroke-linecap="round" fill="none">
+              <path d="M64 48 L58 64 L50 64"/><path d="M96 48 L102 64 L110 64"/>
+            </g>
+          </svg>
+        </span>
+        <span class="drone-shadow" aria-hidden="true"></span>
+        <span class="drone-tip">Complimentary aerial footage <span aria-hidden="true">&rarr;</span></span>
       </a>
       <img class="broker-key" src="brand/baratta-key.png" width="188" height="188" alt="Joseph Baratta and Company Realty key logo">
     </section>
@@ -254,5 +271,45 @@
   (function(){var el=document.getElementById('visit-count');if(!el)return;
   fetch('https://domsellsforyou.goatcounter.com/counter/TOTAL.json').then(function(r){return r.ok?r.json():null}).then(function(d){if(d&&d.count){el.textContent='Site visits: '+d.count;el.hidden=false;}}).catch(function(){});})();
   </script>
+<script>
+(function () {
+  var d = document.querySelector('.hero-drone');
+  if (!d) return;
+  var hero = d.closest('.hero');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (reduce.matches) return;
+  d.classList.add('is-flying');
+  var t0 = performance.now(), last = t0, x = 0.3, y = 0.3, px = x, py = y, vx = 0, tilt = 0;
+  var hover = false, visible = true, slow = 1;
+  d.addEventListener('mouseenter', function () { hover = true; });
+  d.addEventListener('mouseleave', function () { hover = false; });
+  d.addEventListener('focus', function () { hover = true; });
+  d.addEventListener('blur', function () { hover = false; });
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; }).observe(hero);
+  }
+  function frame(now) {
+    var dt = Math.min(0.05, (now - last) / 1000); last = now;
+    slow += ((hover ? 0.08 : 1) - slow) * Math.min(1, dt * 4);
+    var t = (window.__droneT = (window.__droneT || 0) + dt * slow);
+    if (visible && !document.hidden) {
+      var w = hero.clientWidth, h = hero.clientHeight;
+      var tx = 0.5 + 0.38 * Math.sin(t * 0.32) + 0.07 * Math.sin(t * 0.83 + 1.3) + 0.03 * Math.sin(t * 1.9);
+      var ty = 0.19 + 0.05 * Math.sin(t * 0.37 + 0.6) + 0.035 * Math.sin(t * 0.93 + 2.1) + 0.015 * Math.sin(t * 2.7);
+      x += (tx - x) * Math.min(1, dt * 2.2);
+      y += (ty - y) * Math.min(1, dt * 2.2);
+      var nvx = (x - px) / Math.max(dt, 0.001); px = x; py = y;
+      vx += (nvx - vx) * Math.min(1, dt * 3);
+      tilt += (Math.max(-14, Math.min(14, vx * 90)) - tilt) * Math.min(1, dt * 4);
+      var bw = d.offsetWidth, left = x * (w - bw), top = y * h;
+      d.style.transform = 'translate3d(' + left.toFixed(1) + 'px,' + top.toFixed(1) + 'px,0)';
+      d.style.setProperty('--tilt', tilt.toFixed(2) + 'deg');
+      d.classList.toggle('tip-left', x > 0.7);
+    }
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+</script>
 </body>
 </html>
