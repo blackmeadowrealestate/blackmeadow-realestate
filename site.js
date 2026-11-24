@@ -277,4 +277,47 @@
   }
 
   initBackgroundMusic();
+
+  function initNavToggle() {
+    var btn = document.querySelector(".nav-toggle");
+    var nav = document.getElementById("primary-nav");
+    if (!btn || !nav) return;
+
+    function isOpen() {
+      return btn.getAttribute("aria-expanded") === "true";
+    }
+
+    function setOpen(open) {
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      btn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      nav.classList.toggle("is-open", open);
+    }
+
+    btn.addEventListener("click", function () {
+      setOpen(!isOpen());
+    });
+
+    nav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () { setOpen(false); });
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && isOpen()) {
+        setOpen(false);
+        btn.focus();
+      }
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!isOpen()) return;
+      if (btn.contains(event.target) || nav.contains(event.target)) return;
+      setOpen(false);
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 768 && isOpen()) setOpen(false);
+    });
+  }
+
+  initNavToggle();
 })();

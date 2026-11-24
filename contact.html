@@ -13,11 +13,11 @@
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <header class="site-header">
+  <header class="site-header" id="top">
     <div class="wrap header-inner">
       <a class="logo" href="index.html">Dom Sells For You</a>
       <div class="header-right">
-      <nav aria-label="Primary">
+      <nav id="primary-nav" aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="hudson-valley.html">Hudson Valley</a>
@@ -31,6 +31,9 @@
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2 3 11h2v9h6v-6h2v6h6v-9h2L12 3.2z"/></svg>
         <span>Homes for Sale</span>
       </a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span class="nav-toggle-icon" aria-hidden="true"></span>
+      </button>
       </div>
     </div>
   </header>
@@ -106,6 +109,7 @@
     </section>
   </main>
 
+  <div class="back-to-top"><a href="#top">↑ Back to top</a></div>
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <div class="footer-copy">
