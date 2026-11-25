@@ -122,22 +122,40 @@
               <clipPath id="sr-hull">
                 <path d="M390,126 C360,126 344,128 330,136 C312,146 300,156 295,170 C292,180 300,190 314,202 C326,214 328,228 326,244 C324,260 314,276 304,292 C292,310 288,328 298,342 C308,352 328,354 348,346 C364,338 376,332 390,332 C404,332 416,338 432,346 C452,354 472,352 482,342 C492,328 488,310 476,292 C466,276 456,260 454,244 C452,228 454,214 466,202 C480,190 488,180 485,170 C480,156 468,146 450,136 C436,128 420,126 390,126 Z"/>
               </clipPath>
-            </defs>
+                          <radialGradient id="sr-prop-disc" cx="0.5" cy="0.5" r="0.5">
+                <stop offset="0" stop-color="#1A1C20" stop-opacity="0.05"/>
+                <stop offset=".45" stop-color="#1A1C20" stop-opacity=".12"/>
+                <stop offset=".78" stop-color="#1A1C20" stop-opacity=".1"/>
+                <stop offset="1" stop-color="#1A1C20" stop-opacity="0"/>
+              </radialGradient>
+</defs>
 
             <ellipse cx="390" cy="455" rx="200" ry="15" fill="#000" opacity=".15"/>
 
-                        <g class="prop-spin-b" transform="translate(124,352) rotate(48)">
-              <path d="M8,0 C24,-3 54,-7.8 88,-6.6 C104,-5.8 114,-2.6 116.5,0 C114,2.6 104,5.8 88,6.6 C54,7.8 24,3 8,0 Z" fill="url(#sr-blade)"/>
-              <path d="M8,0 C24,-3 54,-7.8 88,-6.6 C104,-5.8 114,-2.6 116.5,0 C114,2.6 104,5.8 88,6.6 C54,7.8 24,3 8,0 Z" fill="url(#sr-blade)" transform="rotate(180)"/>
+            <g transform="translate(124,352)">
+              <g transform="scale(1,0.42)">
+                <circle class="prop-disc" r="118" fill="url(#sr-prop-disc)"/>
+                <g class="prop-spin prop-spin-b">
+                  <circle r="116.5" fill="#000" fill-opacity="0"/>
+                  <path d="M8,0 C24,-3 54,-7.8 88,-6.6 C104,-5.8 114,-2.6 116.5,0 C114,2.6 104,5.8 88,6.6 C54,7.8 24,3 8,0 Z" fill="url(#sr-blade)"/>
+                  <path d="M8,0 C24,-3 54,-7.8 88,-6.6 C104,-5.8 114,-2.6 116.5,0 C114,2.6 104,5.8 88,6.6 C54,7.8 24,3 8,0 Z" fill="url(#sr-blade)" transform="rotate(180)"/>
+                </g>
+              </g>
               <circle r="10" fill="#2c3035"/>
               <circle r="10" fill="none" stroke="#121416" stroke-width=".9"/>
               <circle r="6.2" fill="#1a1d21"/>
               <circle r="2.6" fill="#3e454c"/>
               <circle r="1.2" fill="#6a5840"/>
             </g>
-                        <g class="prop-spin" transform="translate(656,352) rotate(-28)">
-              <path d="M8,0 C24,-3 54,-7.8 88,-6.6 C104,-5.8 114,-2.6 116.5,0 C114,2.6 104,5.8 88,6.6 C54,7.8 24,3 8,0 Z" fill="url(#sr-blade)"/>
-              <path d="M8,0 C24,-3 54,-7.8 88,-6.6 C104,-5.8 114,-2.6 116.5,0 C114,2.6 104,5.8 88,6.6 C54,7.8 24,3 8,0 Z" fill="url(#sr-blade)" transform="rotate(180)"/>
+            <g transform="translate(656,352)">
+              <g transform="scale(1,0.42)">
+                <circle class="prop-disc" r="118" fill="url(#sr-prop-disc)"/>
+                <g class="prop-spin">
+                  <circle r="116.5" fill="#000" fill-opacity="0"/>
+                  <path d="M8,0 C24,-3 54,-7.8 88,-6.6 C104,-5.8 114,-2.6 116.5,0 C114,2.6 104,5.8 88,6.6 C54,7.8 24,3 8,0 Z" fill="url(#sr-blade)"/>
+                  <path d="M8,0 C24,-3 54,-7.8 88,-6.6 C104,-5.8 114,-2.6 116.5,0 C114,2.6 104,5.8 88,6.6 C54,7.8 24,3 8,0 Z" fill="url(#sr-blade)" transform="rotate(180)"/>
+                </g>
+              </g>
               <circle r="10" fill="#2c3035"/>
               <circle r="10" fill="none" stroke="#121416" stroke-width=".9"/>
               <circle r="6.2" fill="#1a1d21"/>
@@ -175,18 +193,30 @@
               <ellipse cx="-6" cy="-2.4" rx="7" ry="2.4" fill="#fff" opacity=".12"/>
             </g>
 
-                        <g class="prop-spin" transform="translate(186,88) rotate(32)">
-              <path d="M8,0 C24,-3 54,-7.8 88,-6.6 C104,-5.8 114,-2.6 116.5,0 C114,2.6 104,5.8 88,6.6 C54,7.8 24,3 8,0 Z" fill="url(#sr-blade)"/>
-              <path d="M8,0 C24,-3 54,-7.8 88,-6.6 C104,-5.8 114,-2.6 116.5,0 C114,2.6 104,5.8 88,6.6 C54,7.8 24,3 8,0 Z" fill="url(#sr-blade)" transform="rotate(180)"/>
+            <g transform="translate(186,88)">
+              <g transform="scale(1,0.42)">
+                <circle class="prop-disc" r="118" fill="url(#sr-prop-disc)"/>
+                <g class="prop-spin">
+                  <circle r="116.5" fill="#000" fill-opacity="0"/>
+                  <path d="M8,0 C24,-3 54,-7.8 88,-6.6 C104,-5.8 114,-2.6 116.5,0 C114,2.6 104,5.8 88,6.6 C54,7.8 24,3 8,0 Z" fill="url(#sr-blade)"/>
+                  <path d="M8,0 C24,-3 54,-7.8 88,-6.6 C104,-5.8 114,-2.6 116.5,0 C114,2.6 104,5.8 88,6.6 C54,7.8 24,3 8,0 Z" fill="url(#sr-blade)" transform="rotate(180)"/>
+                </g>
+              </g>
               <circle r="10" fill="#2c3035"/>
               <circle r="10" fill="none" stroke="#121416" stroke-width=".9"/>
               <circle r="6.2" fill="#1a1d21"/>
               <circle r="2.6" fill="#3e454c"/>
               <circle r="1.2" fill="#6a5840"/>
             </g>
-                        <g class="prop-spin-b" transform="translate(594,88) rotate(-40)">
-              <path d="M8,0 C24,-3 54,-7.8 88,-6.6 C104,-5.8 114,-2.6 116.5,0 C114,2.6 104,5.8 88,6.6 C54,7.8 24,3 8,0 Z" fill="url(#sr-blade)"/>
-              <path d="M8,0 C24,-3 54,-7.8 88,-6.6 C104,-5.8 114,-2.6 116.5,0 C114,2.6 104,5.8 88,6.6 C54,7.8 24,3 8,0 Z" fill="url(#sr-blade)" transform="rotate(180)"/>
+            <g transform="translate(594,88)">
+              <g transform="scale(1,0.42)">
+                <circle class="prop-disc" r="118" fill="url(#sr-prop-disc)"/>
+                <g class="prop-spin prop-spin-b">
+                  <circle r="116.5" fill="#000" fill-opacity="0"/>
+                  <path d="M8,0 C24,-3 54,-7.8 88,-6.6 C104,-5.8 114,-2.6 116.5,0 C114,2.6 104,5.8 88,6.6 C54,7.8 24,3 8,0 Z" fill="url(#sr-blade)"/>
+                  <path d="M8,0 C24,-3 54,-7.8 88,-6.6 C104,-5.8 114,-2.6 116.5,0 C114,2.6 104,5.8 88,6.6 C54,7.8 24,3 8,0 Z" fill="url(#sr-blade)" transform="rotate(180)"/>
+                </g>
+              </g>
               <circle r="10" fill="#2c3035"/>
               <circle r="10" fill="none" stroke="#121416" stroke-width=".9"/>
               <circle r="6.2" fill="#1a1d21"/>

@@ -1019,8 +1019,13 @@ input:focus, textarea:focus {
   animation: drone-hover 1.6s ease-in-out infinite alternate;
   transition: transform .3s ease;
 }
-.hero-drone .prop-spin { transform-box: fill-box; transform-origin: center; animation: drone-prop-spin .26s linear infinite; }
-.hero-drone .prop-spin-b { animation-duration: .3s; animation-direction: reverse; }
+.hero-drone .prop-spin {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: drone-prop-spin .16s linear infinite;
+}
+.hero-drone .prop-spin-b { animation-duration: .18s; animation-direction: reverse; }
+.hero-drone .prop-disc { pointer-events: none; }
 .hero-drone .nav-red { animation: drone-blink 1.2s ease-in-out infinite; }
 .hero-drone .nav-green { animation: drone-blink 1.2s ease-in-out .6s infinite; }
 .hero-drone .drone-shadow {
@@ -1064,6 +1069,7 @@ input:focus, textarea:focus {
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-drone svg, .hero-drone .prop-spin, .hero-drone .drone-shadow, .hero-drone .nav-light { animation: none; }
+  .hero-drone .prop-disc { display: none; }
 }
 
 
