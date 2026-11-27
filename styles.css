@@ -86,7 +86,7 @@ nav a:hover { color: var(--ink); }
 .hero-media {
   position: absolute;
   inset: 0;
-  background: #1c1915 url("hero.jpg") center 48% / cover no-repeat;
+  background: #1c1915 url("hero-christmas.jpg") center 48% / cover no-repeat;
 }
 
 .hero-shade {
@@ -864,7 +864,7 @@ input:focus, textarea:focus {
 }
 
 .hero-snow .page-hero-media {
-  background-image: url("hero.jpg");
+  background-image: url("hero-christmas.jpg");
   background-position: center 45%;
 }
 
